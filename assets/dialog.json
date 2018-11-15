@@ -1,0 +1,138 @@
+{
+  "passages": [
+    {
+      "text": "Estel, I've been looking for you for <shout>so</shout>  long!\n[[Well, I don't know you anymore ->Illeana frowned]]\n[[Illeana! Where have you been? ->Illeana suprised]]",
+      "links": [
+        {
+          "name": "Well, I don't know you anymore ",
+          "link": "Illeana frowned",
+          "pid": "2"
+        },
+        {
+          "name": "Illeana! Where have you been? ",
+          "link": "Illeana suprised",
+          "pid": "3"
+        }
+      ],
+      "name": "Estel meets Illeana",
+      "pid": "1",
+      "position": {
+        "x": "420",
+        "y": "165"
+      },
+      "tags": [
+        "Illeana",
+        "happy"
+      ]
+    },
+    {
+      "text": "You don't know me?? I'm sorry. I left, but I was looking for a cure.\n[[A cure? -> Estel cure]]\n[[I remember something -> Estel maybe]]",
+      "links": [
+        {
+          "name": "A cure? ",
+          "link": " Estel cure",
+          "pid": "6"
+        },
+        {
+          "name": "I remember something ",
+          "link": " Estel maybe",
+          "pid": "4"
+        }
+      ],
+      "name": "Illeana frowned",
+      "pid": "2",
+      "position": {
+        "x": "586",
+        "y": "198"
+      },
+      "tags": [
+        "Illeana",
+        "scared"
+      ]
+    },
+    {
+      "text": "Estel! <shine>It's a long story</shine>\n[[Agne! ->Illeana speaks]]",
+      "links": [
+        {
+          "name": "Illeana! I'm, here to listen",
+          "link": "Illeana speaks",
+          "pid": "5"
+        }
+      ],
+      "name": "Illeana suprised",
+      "pid": "3",
+      "position": {
+        "x": "246",
+        "y": "205"
+      },
+      "tags": [
+        "Illeana",
+        "scared"
+      ]
+    },
+    {
+      "text": "I remember something... when we were children... We were playing around togheter. \n[[Where have you been? ->Illeana speaks]]",
+      "links": [
+        {
+          "name": "Where have you been? ",
+          "link": "Illeana speaks",
+          "pid": "5"
+        }
+      ],
+      "name": " Estel maybe",
+      "pid": "4",
+      "position": {
+        "x": "602",
+        "y": "334"
+      },
+      "tags": [
+        "Estel",
+        "tired"
+      ]
+    },
+    {
+      "text": "I left you months ago, because you were sick. I was looking for a cure in town, but nobody helped me. \n[[ Back to the beginning ->Estel meets Illeana]]",
+      "links": [
+        {
+          "name": " Back to the beginning ",
+          "link": "Estel meets Illeana",
+          "pid": "1"
+        }
+      ],
+      "name": "Illeana speaks",
+      "pid": "5",
+      "position": {
+        "x": "376",
+        "y": "443"
+      },
+      "tags": [
+        "Illeana"
+      ]
+    },
+    {
+      "text": "A cure for me? Illeana, I'm sorry, come to me. Tell me what happened?\n[[Where have you been? ->Illeana speaks]]",
+      "links": [
+        {
+          "name": "Where have you been? ",
+          "link": "Illeana speaks",
+          "pid": "5"
+        }
+      ],
+      "name": " Estel cure",
+      "pid": "6",
+      "position": {
+        "x": "466",
+        "y": "306"
+      },
+      "tags": [
+        "Estel",
+        "thinking"
+      ]
+    }
+  ],
+  "name": "g",
+  "startnode": "1",
+  "creator": "Twine",
+  "creator-version": "2.2.1",
+  "ifid": "A70D6002-53CE-4E85-BFDA-CE6D26739AA6"
+}

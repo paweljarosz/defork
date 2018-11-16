@@ -8,7 +8,12 @@ local M = {}
 
 M.debug = true	-- Flag for debugging, true by default. If set to true, all info and warnings will be shown, otherwise only errors.
 
--------------------------------------------  [ TWINE DECODING FUNCTIONS ] -----------------------------------------------
+-- DEFORK - is an asset that allows Defold users to easily create interactive, nonlinear conversations and stories,
+-- that utilizes RichText for GUI representation and uses Twine and Twinson as an open-source conversation making tool.
+-- Below code is written by Pawel Jarosz. Feel free to use it any way you want it as long as you include the original copyright
+-- and license notice in any copy of the software/source. (MIT full license: https://opensource.org/licenses/MIT)
+
+-------------------------------------------  [ DEFORK FUNCTIONS TO USE TWINE ] -----------------------------------------------
 
 function M.load(resource)
 	local data = sys.load_resource(resource)
@@ -124,7 +129,7 @@ function M.getOptionText(no, nodeID, conversation)
 end
 
 
--------------------------------------------  [ RICHTEXT FUNCTIONS ] -----------------------------------------------
+-------------------------------------------  [ DEFORK FUNCTIONS TO USE RICHTEXT ] -----------------------------------------------
 
 
 local default_settings = {		-- some default settings for richtext (have no parent gui node!)

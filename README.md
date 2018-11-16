@@ -196,6 +196,12 @@ Additional function used to acquire inputs in gui_script's on_input() function, 
 
 Defork module has a `defork.debug` flag set to true by default. When it is set to true, all info and warnings will be printed to console, otherwise - only errors.
 
+## Notice
+
+DEFORK - is an asset that allows Defold users to easily create interactive, nonlinear conversations and stories, that utilizes RichText for GUI representation and uses Twine and Twinson as an open-source conversation making tool.
+Below code is written by Pawel Jarosz. Feel free to use it any way you want it as long as you include the original copyright
+and license notice in any copy of the software/source. (MIT full license: https://opensource.org/licenses/MIT)
+
 ## Help
 
 [Build and run](defold://build) to see an example in action. You can of course alter any settings to fit your needs.

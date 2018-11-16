@@ -6,7 +6,7 @@ Defork is for you to easily and conveniently create different, interactive, intr
 One of the popular tool for creating dialogs used as an example here is [Twine](twinery.org) - an open-source tool by Chris Klimas.
 Example utilizes also [RichText](github.com/britzl/defold-richtext) for a convenient and easy way of representing a dialog window - thanks to Bjorn Ritzl.
 
-[GUI](assets/asset_page/gui_example.PNG)
+![GUI](assets/asset_page/gui_example.PNG)
 
 ## Installation
 You can use Defork in your own project by adding this project as a [Defold library dependency](http://www.defold.com/manuals/libraries/). Open your game.project file and in the dependencies field under project add:
@@ -37,7 +37,7 @@ With Defork you can easily:
 
 You can create dialog data in Twine - an open-source tool, that combined with [Twinson](https://github.com/lazerwalker/twison) allows you to export data to a json file. This specific Twinson format is required for a proper working of Defork. Remember to Change Story Format to Twinson in order to have a json data generated after clicking Play in Twine.
 
-[TWINE](assets/asset_page/twine_example.PNG)
+![TWINE](assets/asset_page/twine_example.PNG)
 
 ## RichText dependency
 
@@ -172,23 +172,23 @@ Creates a RichText words under the specified parent node and check tags with a s
 * `custom_check_tags_function` (function, optional) - a custom function for checking custom tags in RichText. You can for example modify and animate words nodes properties.
 
 **RETURNS**
-* `words` (RichText data) - a words nodes created by RichText. You can check for inputs on those words, for example on clickable options.
+* `words` (RichText data table) - a words nodes created by RichText. You can check for inputs on those words, for example on clickable options.
 
 
 ### defork.refreshGUI(gui_node_id_to_refresh)
 Clones the provided GUI node, delete old one and returns ID of the new node. Used to refresh GUI, on which the RichText was displayed, so you can display another text again. It sets the new node as the default parent for RichText, so you don't have to attach it again, if you don't need to.
 
 **PARAMETERS**
-* `gui_node_id_to_refresh` - a GUI node ID that you want to refresh, so it means: clone it, remove old one and return new.
+* `gui_node_id_to_refresh` (gui_node_id)- a GUI node ID that you want to refresh, so it means: clone it, remove old one and return new.
 
 **RETURNS**
-* `next_node` - a GUI node ID of the new, cloned node, that is already saved as a default parent for RichText.
+* `next_node` (gui_node_id) - a GUI node ID of the new, cloned node, that is already saved as a default parent for RichText.
 
 ### defork.on_input(richtextWords, action)
 Additional function used to acquire inputs in gui_script's on_input() function, to easily handle RichText hyperlinks. RichText then sends a message to that gui_script, so you can handle input over different hyperlinks. See Defork example or RichText documentation for more information about messages.
 
 **PARAMETERS**
-* `richtextWords` - a words table returned by richtext.create(..) function needed for richtext.on_click(..), which gets input over hyperlinks.
+* `richtextWords` (RichText data table) - a words table returned by richtext.create(..) function needed for richtext.on_click(..), which gets input over hyperlinks.
 * `action` - on_input() function parameter used to check if it was action.pressed over hyperlink.
 
 

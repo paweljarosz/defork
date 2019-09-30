@@ -12,7 +12,7 @@ Example utilizes also [RichText](github.com/britzl/defold-richtext) for a conven
 ## Installation
 You can use Defork in your own project by adding this project as a [Defold library dependency](http://www.defold.com/manuals/libraries/). Open your game.project file and in the dependencies field under project add:
 
-	http://www.defold.com/p/52269/126639/archive
+	https://github.com/paweljarosz/defork/archive/master.zip
 
 Once added, you must require the main Lua module in scripts via
 

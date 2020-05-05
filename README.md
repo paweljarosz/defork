@@ -31,7 +31,7 @@ local defork = require("defork.defork")
 
 Then you need to add dialogs exported from Twine in a JSON format (using Twinson - details below) to your project. To add it, you need to provide a path in [Custom Resource] field of your game.project in Defold. For example, if you have your file in the assets folder in the project directory, type: assets/dialogue.json. You can find more informations about [custom resources in official Defold's documentation here.](https://defold.com/manuals/resource/)
 
-![GAME_PROJECT](assets/asset_page/game_project_example.PNG)
+![GAME_PROJECT](assets/asset_page/game_project_example.png)
 
 ## What you can do?
 

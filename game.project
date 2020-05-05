@@ -1,6 +1,6 @@
 [project]
 title = DEFork
-custom_resources = assets/dialog.json
+custom_resources = assets/dialogue.json
 dependencies = https://github.com/britzl/defold-richtext/archive/master.zip
 
 [bootstrap]

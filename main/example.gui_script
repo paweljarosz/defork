@@ -4,25 +4,25 @@ local richtext = require "richtext.richtext"
 function init(self)
 	msg.post(".", "acquire_input_focus")
 
-	local dialog = defork.load("/assets/dialog.json")		-- with Defork you can easily create and use json dialogs (Twine + Twinson)
+	local dialogue = defork.load("/assets/dialogue.json")		-- with Defork one can easily create and use json dialogues (Twine + Twinson)
 
 	print("Name:", defork.getName())
-	print("Start node ID:", defork.getStartNodeID())		-- Defork stores loaded dialog data so you don't have to provide it everytime
+	print("Start node ID:", defork.getStartNodeID())		-- Defork stores loaded dialogue data so there is no need to provide it everytime
 
 	defork.setCurrentNode(defork.getStartNodeID())			-- sets current node ID and store it in Defork script for convenience
 
 	print("Text:", defork.getText())						-- so you don't have to provide ID everytime if not needed
-	print("Tags:", defork.getTags())						-- use Twine's tags to get more information about dialog, e.g. speaker, emotion
+	print("Tags:", defork.getTags())						-- use Twine's tags to get more information about dialogue, e.g. speaker, emotion
 
 	for i,_ in ipairs(defork.getOptions()) do
 		print("Option "..i..":", defork.getOptionText(i))	-- every option contains text and id that links option to the next node
 		print("Leads to:", defork.getOptionLink(i))
 	end
 
-	self.node = gui.get_node("box")							-- you can use Rich Text to easily display and manage dialog data
+	self.node = gui.get_node("box")							-- you can use Rich Text to easily display and manage dialogue data
 	defork.setRichtextParent(self.node)						-- remember to set parent node for Tich Text, it is also saved inside Defork
 
-	self.text =defork.getText(defork.getStartNodeID())		-- you can get text of a specific dialog's node ID
+	self.text =defork.getText(defork.getStartNodeID())		-- you can get text of a specific dialogue's node ID
 
 	local new_settings = {}
 	new_settings.width = 250
@@ -57,10 +57,10 @@ function on_message(self, message_id, message, sender)
 		for i,selected in ipairs(options) do
 			if message_id == hash("option_"..i) then
 				self.node = defork.refreshGUI(self.node)		-- delete the old node and create a new empty node, set the parent too
-				new_dialog = selected.pid						-- go to the dialog's node linked by the selected option
+				new_dialogue = selected.pid						-- go to the dialogue's node linked by the selected option
 
 				-- set the current node ID in the defork script, so you don't have to provide it everytime
-				defork.setCurrentNode(new_dialog)self.text = defork.getText()
+				defork.setCurrentNode(new_dialogue)self.text = defork.getText()
 
 				-- create formatted text with colored speaker, image, speech and options
 				local speaker = defork.getTags()[1]

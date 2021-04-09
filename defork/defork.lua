@@ -101,7 +101,7 @@ end
 function M.getOptions(nodeID, conversation)
 	if nodeID or curr_node then
 		local id = nodeID or curr_node
-		return (conversation and conversation.passagess[tonumber(id)].links) 
+		return (conversation and conversation.passages[tonumber(id)].links) 
 		or (dialog_data and dialog_data.passages[tonumber(id)].links) or nil
 	end
 	print("Defork:","Error: NodeID not specified and no current node ID saved") 
@@ -111,7 +111,7 @@ end
 function M.getOptionLink(no, nodeID, conversation)
 	if no and (nodeID or curr_node) then
 		local id = nodeID or curr_node
-		return (conversation and conversation.passagess[tonumber(id)].links[no].pid) 
+		return (conversation and conversation.passages[tonumber(id)].links[no].pid) 
 		or (dialog_data and dialog_data.passages[tonumber(id)].links[no].pid) or nil
 	end
 	print("Defork:","Error: None of the option selected, NodeID not specified and no current node ID saved") 
@@ -121,7 +121,7 @@ end
 function M.getOptionText(no, nodeID, conversation)
 	if no and (nodeID or curr_node) then
 		local id = nodeID or curr_node
-		return (conversation and conversation.passagess[tonumber(id)].links[no].name) 
+		return (conversation and conversation.passages[tonumber(id)].links[no].name) 
 		or (dialog_data and dialog_data.passages[tonumber(id)].links[no].name) or nil
 	end
 	print("Defork:","Error: None of the option selected, NodeID not specified and no current node ID saved") 
